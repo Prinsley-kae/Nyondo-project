@@ -1,0 +1,7 @@
+.grid-container{
+    width:600px;
+    display:grid;
+}
+.box{
+    background-color: red;
+}
