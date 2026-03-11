@@ -157,7 +157,7 @@
 
               <div class="input-section">
                 <label for="supplier ID">Supplier ID</label>
-                <input type="alphanumeric" />
+                <input type="number" />
               </div>
               </div>
               <!-- Row 2 -->
@@ -205,14 +205,14 @@
               </div>
               <div class="input-branch">
                 <label for="street address">Street Address</label>
-                <input type="alphanumeric" placeholder="Enter Street Address" />
+                <input type="text" placeholder="Enter Street Address" />
               </div>
             </div>
             <!-- Row 3 -->
             <div class="input-main">
               <div class="input-branch">
                 <label for="email">Email</label>
-                <input type="alphanumeric" placeholder="Enter Email" />
+                <input type="email" placeholder="Enter Email" />
               </div>
               <div class="input-branch">
                 <label for="country">Country</label>
@@ -251,11 +251,11 @@
             <div class="input-main">
               <div class="input-branch">
                 <label for="quantity">Quantity</label>
-                <input type="alphanumeric" required />
+                <input type="number" placeholder="Quantity" />
               </div>
               <div class="input-branch">
                 <label for="unitprice">Unit Price</label>
-                <input type="alphanumeric" />
+                <input type="number" placeholder="Unit Price" />
               </div>
             </div>
           </section>
@@ -270,7 +270,7 @@
               </div>
               <div class="input-branch">
                 <label for="Account Number">Account Number</label>
-                <input type="alphanumeric"/>
+                <input type="number"/>
               </div>
               </div>
               <!-- Row 2 -->
@@ -289,7 +289,14 @@
               </div>
               <div class="input-branch">
                 <label for="payment terms">Payment Terms</label>
-                <input type="alphanumeric"/>
+                <select name="" id="">
+                  <option value="" disabled selected>Select payment terms</option>
+                  <option value="">Cash</option>
+                  <option value="">Credit 30 days</option>
+                  <option value="">Credit 60 days</option>
+                  <option value="">Credit 90 days</option>
+                  <option value="">Installments</option>
+                  </select>
               </div>
               </div>
           </section>
