@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supplier Registration Form</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: aliceblue;
+    }
+    .container {
+      /* background-color: aqua; */
+      height: 1065px;
+      display: flex;
+      width: 100%;
+      column-gap: 10px;
+      padding-bottom: 10px;
+    }
+    .sidebar {
+      flex: 1;
+      /* height: 50vh; */
+      /* border-right-width: 1px;
+      border-right-color: black;
+      border-right-style: solid; */
+      border: 1px solid black;
+      flex-direction: column;
+      gap: 10px;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    .sidebar a {
+      display: block;
+      padding: 12px 15px;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      border-radius: 5px;
+      border: 1px black solid;
+      font-weight: bold;
+    }
+    .content {
+      flex: 3;
+      border: 1px black solid;
+      padding: 20px;
+    }
+    .input-container {
+      display: flex;
+    }
+    .input-section {
+      display: flex;
+      flex-direction: column;     
+      flex: 1;
+      padding: 5px;
+    }
+    .input-main {
+      display: flex;
+      margin-bottom: 15px;
+      gap: 20px;
+    }
+    .input-branch {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+    input,
+    select {
+      height: 40px;
+      box-sizing: border-box;
+      background-color: lightgray;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .cancel-button {
+      background-color: lightpink;
+    }
+    .submit-button {
+      background-color: lightpink;
+    }
+    h1,
+    h2 {
+      text-align: center;
+    }
+    .profile {
+      display: flex;
+      padding-bottom: 20px;
+      flex-direction: column;
+    }
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px black solid;
+      object-fit: cover;
+      background-color: lightgrey;
+      margin-right: 30px;
+      margin-left: 70px;
+    }
+    .form{
+      padding:10px;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="profile">
+          <div class="profile-picture">
+            <img src="" />
+          </div>
+          <form>
+            <div class="form">
+              <label for="yourname">Your name</label>
+              <input type="text" placeholder="Full Name" required />
+            </div>
+            <div class="form">
+              <label for="position">Job Title</label>
+              <input type="text" placeholder="Job Title" />
+            </div>
+          </form>
+        </div>
+        <div>
+          <a href="./dashboard.html">dashboard</a>
+        </div>
+        <div>
+          <a href="./index.html">Sales Registration Form</a>
+        </div>
+        <div>
+          <a href="./stock.html">Stock management</a>
+        </div>
+        <div>
+          <a href="./transport.html">Transport management</a>
+        </div>
+      </div>
+      <div class="content">
+        <form action="">
+          <!-- section 1 -->
+          <section>
+            <h1>Supplier Information</h1>
+            <!-- Row 1 -->
+            <div class="input-container">
+              <div class="input-section">
+                <label for="Supplier name">Company/Supplier Name</label>
+                <input type="text" placeholder="Full Name" required />
+              </div>
+
+              <div class="input-section">
+                <label for="supplier ID">Supplier ID</label>
+                <input type="alphanumeric" />
+              </div>
+              </div>
+              <!-- Row 2 -->
+              <div class="input-container">
+                <div class="input-section">
+                  <label for="contact person">Contact Person Name</label>
+                  <input type="text" placeholder="Full Name" required />
+                </div>
+                <div class="input-section">
+                  <label for="Supplier type">Supplier Type</label>
+                  <select name="" id="">
+                    <option value="" disabled selected>
+                      Select supplier type
+                    </option>
+                    <option value="">Manufacturer</option>
+                    <option value="">Wholesaler</option>
+                    <option value="">International</option>
+                    <option value="">Retailer</option>
+                    <option value="">Distributor</option>
+                    <option value="">Local</option>
+                    <option value="">Service</option>
+                  </select>
+                </div>
+                </div>
+          </section>
+          <!-- section 2 -->
+          <section>
+            <h2>Contact Information</h2>
+            <!-- Row 1 -->
+            <div class="input-main">
+              <div class="input-branch">
+                <label for="phonename">Phone Number</label>
+                <input type="numbers" placeholder="Enter Phone Number" />
+              </div>
+              <div class="input-branch">
+                <label for="phonenumber">Alternative Phone Number</label>
+                <input type="number" placeholder="Enter Phone Number" />
+              </div>
+            </div>
+            <!-- Row 2 -->
+            <div class="input-main">
+              <div class="input-branch">
+                <label for="district">District</label>
+                <input type="text" placeholder="Enter District Name" />
+              </div>
+              <div class="input-branch">
+                <label for="street address">Street Address</label>
+                <input type="alphanumeric" placeholder="Enter Street Address" />
+              </div>
+            </div>
+            <!-- Row 3 -->
+            <div class="input-main">
+              <div class="input-branch">
+                <label for="email">Email</label>
+                <input type="alphanumeric" placeholder="Enter Email" />
+              </div>
+              <div class="input-branch">
+                <label for="country">Country</label>
+                <select name="" id="">
+                  <option value="" disabled selected>Select the country</option>
+                  <option value="">Uganda</option>
+                  <option value="">Kenya</option>
+                  <option value="">Tanzania</option>
+                  <option value="">Rwanda</option>
+                  <option value="">Burundi</option>
+                  <option value="">South Sudan</option>
+                  <option value="">South Africa</option>
+                  <option value="">DRC</option>
+                  <option value="">Cameroon</option>
+                  <option value="">Nigeria</option>
+                  <option value="">Tunisia</option>
+                </select>
+              </div>
+            </div>
+          </section>
+          <!-- section 3 -->
+          <section>
+            <h2>Supply Details</h2>
+            <!-- Row 1 -->
+            <div class="input-main">
+              <div class="input-branch">
+                <label for="product category">Product category</label>
+                <input type="text" />
+              </div>
+              <div class="input-branch">
+                <label for="products supplied">Products Supplied</label>
+                <input type="text" />
+              </div>
+            </div>
+            <!-- Row 2 -->
+            <div class="input-main">
+              <div class="input-branch">
+                <label for="quantity">Quantity</label>
+                <input type="alphanumeric" required />
+              </div>
+              <div class="input-branch">
+                <label for="unitprice">Unit Price</label>
+                <input type="alphanumeric" />
+              </div>
+            </div>
+          </section>
+          <!-- section 4 -->
+          <section>
+            <h2>Payment Information</h2>
+            <!-- Row 1 -->
+             <div class="input-main">
+              <div class="input-branch">
+                <label for="bank name">Bank Name</label>
+                <input type="text"  />
+              </div>
+              <div class="input-branch">
+                <label for="Account Number">Account Number</label>
+                <input type="alphanumeric"/>
+              </div>
+              </div>
+              <!-- Row 2 -->
+                <div class="input-main">
+              <div class="input-branch">
+                <label for="payment method">Payment Method</label>
+            <select name="" id="">
+                  <option value="" disabled selected>Select payment method</option>
+                  <option value="">Bank Transfer</option>
+                  <option value="">Cash</option>
+                  <option value="">Cheque</option>
+                  <option value="">Mobile Money</option>
+                  <option value="">Credit Card</option>
+                  <option value="">Online Payment Platforms</option>
+                  </select>
+              </div>
+              <div class="input-branch">
+                <label for="payment terms">Payment Terms</label>
+                <input type="alphanumeric"/>
+              </div>
+              </div>
+          </section>
+          <!-- Section 5 -->
+           <section>
+            <div class="input-container">
+            <div class="input-branch">
+                <label for="comment">Comment</label>
+                <input type="text"/>
+              </div>
+              </section>
+          </section>
+          <br><br>
+          <!-- Buttons -->
+          <div class="buttons">
+            <button type="reset" class="cancel-button">Cancel</button>
+            <button type="submit" class="submit-button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
