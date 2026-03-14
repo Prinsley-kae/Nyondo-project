@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stock Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: aliceblue;
+    }
+
+    .sidebar {
+      flex: 1;
+      /* height: 50vh; */
+      /* border-right-width: 1px;
+      border-right-color: black;
+      border-right-style: solid; */
+      /* border: 1px solid black; */
+      flex-direction: column;
+      gap: 10px;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 15px;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      border-radius: 5px;
+      border: 1px black solid;
+      font-weight: bold;
+    }
+
+    .profile {
+      display: flex;
+      padding-bottom: 20px;
+      flex-direction: column;
+    }
+
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px black solid;
+      object-fit: cover;
+      background-color: lightgrey;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+
+    .col-9 {
+      border: 1px solid black;
+      height: 1215px;
+      padding-bottom: 10px;
+      padding-top: 20px;
+    }
+    .col-3 {
+      border: 1px solid black;
+      height: 1215px;
+      padding-bottom: 10px;
+      padding-top: 50px;
+    }
+    input,.form-control {
+      height: 40px;
+      box-sizing: border-box;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <!-- nav bar -->
+   <nav class="navbar navbar-expand-lg bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">Nyondo Stock</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./dashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./index.html">Sales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./supplierregistration.html">Supplies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./transport.html">Transport</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled text-white" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+   <!-- sidebar -->
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-3 ">
+        <div class="sidebar">
+          <div class="profile">
+            <div class="profile-picture">
+              <img src="" />
+            </div>
+            <form>
+              <div class="form">
+                <p>Logged in User:</p>
+                <label for="yourname">Name</label>
+                <input type="text" placeholder="Full Name" required />
+              </div>
+              <br>
+              <div class="form">
+                <label for="position">Role</label>
+                <input type="text" placeholder="Job Title" />
+              </div>
+            </form>
+          </div>
+          <div>
+            <a href="./dashboard.html">dashboard</a>
+          </div>
+          <div>
+            <a href="./index.html">Sales Registration Form</a>
+          </div>
+          <div>
+            <a href="./supplierregistration.html">Supplier Management</a>
+          </div>
+          <div>
+            <a href="./transport.html">Transport management</a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-9">
+        <!-- section 1 -->
+        <h1>Stock Registration Form</h1>
+        <form>
+          <div class="row my-3">
+            <div class="col">
+              <label for="stockentryno" class="form-label">Stock Entry No.</label>
+              <input type="number" class="form-control" id="stockentryno" placeholder="Enter Stock Entry No.">
+            </div>
+            <div class="col">
+              <label for="date" class="form-label">Date</label>
+              <input type="date" class="form-control" id="date" placeholder="Date" aria-label="date">
+            </div>
+            <div class="col">
+              <label for="branchname" class="form-label">Branch/Store Name</label>
+              <input type="text" class="form-control" id="branchname" placeholder="Enter Branch Name">
+            </div>
+          </div>
+          <!-- section 2 -->
+          <h2 class="text-center mt-3">Product Details</h2>
+          <!-- row 1 -->
+          <div class="row my-3">
+            <div class="col">
+              <label for="productname" class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="productname" placeholder="Product Name">
+            </div>
+            <div class="col">
+              <label for="productcode" class="form-label">Product Code</label>
+              <input type="number" class="form-control" id="productcode" placeholder="Product Code">
+            </div>
+          </div>
+          <!-- row 2 -->
+          <div class="row my-3">
+            <div class="col">
+              <label for="productcategory" class="form-label">Product Category</label>
+              <input type="text" class="form-control" id="productcategory" placeholder="Product Category"
+                aria-label="product Category">
+            </div>
+            <div class="col">
+              <label for="unitofmeasure" class="form-label">Unit Of Measure</label>
+              <input type="text" class="form-control" id="unitofmeasure" placeholder="Unit Of Measure"
+                aria-label="unit of measure">
+            </div>
+            <!-- section 3 -->
+            <h2 class="text-center mt-3">Supplier Details</h2>
+            <div class="row my-3">
+              <div class="col">
+                <label for="suppliername" class="form-label">Supplier Name</label>
+                <input type="text" class="form-control" id="suppliername" placeholder="Supplier Name"
+                  aria-label="supplier name">
+              </div>
+              <div class="col">
+                <label for="invoicenumber" class="form-label">Invoice Number</label>
+                <input type="number" class="form-control" id="invoicenumber" placeholder="Invoice Number"
+                  aria-label="Invoice Number">
+              </div>
+            </div>
+            <!-- section 4 -->
+            <h2 class="text-center mt-3">Stock Details</h2>
+            <!-- row 1 -->
+            <div class="row my-3">
+              <div class="col">
+                <label for="quantityreceived" class="form-label">Quantity Received</label>
+                <input type="number" class="form-control" id="quantityreceived" placeholder="Quantity Received"
+                  aria-label="quantity received">
+              </div>
+              <div class="col">
+                <label for="unitcostprice" class="form-label">Unit Cost Price</label>
+                <input type="number" class="form-control" id="unitcostprice" placeholder="Unit Cost Price"
+                  aria-label="unit cost price">
+              </div>
+            </div>
+            <!-- row 2 -->
+            <div class="row my-3">
+              <div class="col">
+                <label for="sellingprice" class="form-label">Selling Price</label>
+                <input type="number" class="form-control" id="sellingprice" placeholder="Selling Price"
+                  aria-label="selling price">
+              </div>
+              <div class="col">
+                <label for="totalcost" class="form-label">Total Cost</label>
+                <input type="number" class="form-control" id="totalcost" placeholder="Total Cost"
+                  aria-label="total cost">
+              </div>
+            </div>
+            <!-- section 5 -->
+            <h2 class="text-center mt-3">Storage Information</h2>
+            <!-- row 1 -->
+            <div class="row my-3">
+              <div class="col">
+                <label for="warehouse" class="form-label">Ware House</label>
+                <input type="text" class="form-control" id="warehouse" placeholder="Ware House" aria-label="ware house">
+              </div>
+              <div class="col">
+                <label for="shelfnumber" class="form-label">Shelf Number</label>
+                <input type="number" class="form-control" id="shelfnumber" placeholder="Shelf Number"
+                  aria-label="shelf number">
+              </div>
+            </div>
+            <!-- section 6 -->
+            <h2 class="text-center mt-3">Additional Information</h2>
+            <!-- row 1 -->
+            <div class="row my-3">
+              <div class="col">
+                <label for="comment" class="form-label">Comment</label>
+                <input type="text" class="form-control" id="comment" placeholder="comment" aria-label="comment">
+              </div>
+            </div>
+            <!-- button section -->
+            <div class="row my-3">
+              <div class="col d-flex justify-content-between">
+                <button type="button" class="btn btn-danger">Cancel</button>
+                <button type="button" class="btn  btn-info">Submit</button>
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
